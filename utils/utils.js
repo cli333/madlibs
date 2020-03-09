@@ -13,6 +13,7 @@ const lib = {
 
 const libber = (paragraph, maxCount = 5) => {
   const arrayOfWords = paragraph.split(" ");
+  const copyOfArrayOfWords = arrayOfWords.slice("");
   const inputsIndices = [];
 
   while (inputsIndices.length < maxCount) {
@@ -31,9 +32,11 @@ const libber = (paragraph, maxCount = 5) => {
     arrayOfWords[idx] = `<input type='text' placeholder='${type}'/>`;
   }
 
-  console.log({ maxCount, inputsIndices });
-
-  console.log(arrayOfWords.join(" "));
+  return {
+    originalMadlib: copyOfArrayOfWords,
+    inputsIndices,
+    madlibForm: arrayOfWords.join(" ")
+  };
 };
 
 module.exports = { libber };
