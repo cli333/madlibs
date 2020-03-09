@@ -7,18 +7,12 @@ const lib = {
   NNS: "noun, plural",
   RB: "adverb",
   VB: "verb",
-  VBD: "verb, past tense", // past tense
+  VBD: "verb, past tense",
   VBZ: "verb, present"
 };
 
-// accepts a paragraph and number of words, default 5
-// paragraph length is min of 300 characters
-
 const libber = (paragraph, maxCount = 5) => {
-  // split paragraph into an array of words
   const arrayOfWords = paragraph.split(" ");
-
-  // indices of the inputs
   const inputsIndices = [];
 
   while (inputsIndices.length < maxCount) {
