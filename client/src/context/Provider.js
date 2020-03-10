@@ -8,7 +8,7 @@ const Provider = ({ children }) => {
 
   useEffect(() => {
     axios.get("/api/").then(res => setMadlibs(res.data));
-  }, []);
+  });
 
   return (
     <ctx.Provider

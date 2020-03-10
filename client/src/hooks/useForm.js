@@ -14,7 +14,7 @@ const useForm = (paragraph, maxCount) => {
 
     // check if paragraph is valid
     if (!isParagraphValid(paragraph)) {
-      setError("Please enter a valid paragraph of at least 200 characters");
+      setError("Please enter a valid paragraph of between 200-2000 characters");
       return;
     }
     // check if maxCount is valid

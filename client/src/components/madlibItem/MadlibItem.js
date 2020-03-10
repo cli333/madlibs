@@ -7,7 +7,10 @@ const MadlibItem = ({ data, isLastItem, _id }) => {
 
   return (
     <React.Fragment>
-      <div id={`madlibitem-${_id}`}></div>
+      <div
+        id={`madlibitem-${_id}`}
+        style={{ border: "2px solid red", width: "500px" }}
+      ></div>
       {!isLastItem && <div className="ui divider"></div>}
     </React.Fragment>
   );

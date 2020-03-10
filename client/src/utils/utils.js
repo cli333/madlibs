@@ -4,6 +4,7 @@ export const placeholder =
 export const isParagraphValid = paragraph => {
   return (
     paragraph.length > 200 &&
+    paragraph.length < 2000 &&
     (paragraph.includes(" ") || paragraph.includes("."))
   );
 };
