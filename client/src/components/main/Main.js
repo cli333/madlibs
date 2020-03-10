@@ -11,7 +11,6 @@ const Main = () => {
         <MadlibItem
           key={madlib._id}
           isLastItem={index === madlibs.length - 1}
-          specialKey={madlib._id}
           {...madlib}
         />
       ))}

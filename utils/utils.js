@@ -29,12 +29,13 @@ const libber = (paragraph, maxCount = 5) => {
 
   for (let index of inputsIndices) {
     const { type, idx } = index;
-    arrayOfWords[idx] = `<input type='text' placeholder='${type}'/>`;
+    arrayOfWords[
+      idx
+    ] = `<input name='${idx}' type='text' placeholder='${type}'/>`;
   }
 
   return {
     originalMadlib: copyOfArrayOfWords,
-    inputsIndices,
     madlibForm: arrayOfWords.join(" ")
   };
 };
