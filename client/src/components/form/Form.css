@@ -33,3 +33,10 @@ strong {
   text-transform: uppercase;
   color: red;
 }
+
+@media (max-width: 600px) {
+  .template {
+    max-width: 92.5% !important;
+    margin: 0 auto;
+  }
+}

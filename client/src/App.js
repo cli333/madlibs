@@ -11,12 +11,10 @@ function App() {
     <BrowserRouter>
       <Provider>
         <Nav />
-        <div className="content">
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/new" component={Form} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/new" component={Form} />
+        </Switch>
       </Provider>
     </BrowserRouter>
   );

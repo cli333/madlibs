@@ -4,16 +4,21 @@ import axios from "axios";
 export const ctx = createContext();
 
 const Provider = ({ children }) => {
-  const [madlibs, setMadlibs] = useState([]);
+  const [madlib, setMadlib] = useState(null);
 
   useEffect(() => {
-    axios.get("/api/").then(res => setMadlibs(res.data));
-  });
+    fetchMadlib();
+  }, []);
+
+  const fetchMadlib = () => {
+    axios.get("/api/").then(res => setMadlib(res.data));
+  };
 
   return (
     <ctx.Provider
       value={{
-        madlibs
+        madlib,
+        fetchMadlib
       }}
     >
       {children}

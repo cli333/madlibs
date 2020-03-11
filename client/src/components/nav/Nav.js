@@ -4,17 +4,25 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="ui labeled icon menu fixed">
-      <NavLink to="/" className="item">
-        <i className="gamepad icon"></i>
-        MadLibs
-      </NavLink>
+    <div className="nav container">
+      <nav className="ui menu">
+        <div data-inverted="" data-tooltip="Home" data-position="bottom left">
+          <NavLink to="/" className="item">
+            MadLibs
+          </NavLink>
+        </div>
 
-      <NavLink to="/new" className="item">
-        <i className="pencil alternate icon"></i>
-        New
-      </NavLink>
-    </nav>
+        <div
+          data-inverted=""
+          data-tooltip="Create a new madlib"
+          data-position="bottom left"
+        >
+          <NavLink to="/new" className="item">
+            New
+          </NavLink>
+        </div>
+      </nav>
+    </div>
   );
 };
 

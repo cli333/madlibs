@@ -1,0 +1,37 @@
+.madlibitem {
+  width: 65%;
+  text-indent: 10%;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  display: inline-block;
+  justify-content: center;
+}
+
+.madlibitem-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rotate {
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

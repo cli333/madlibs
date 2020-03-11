@@ -3,12 +3,25 @@ const router = express.Router();
 const Madlib = require("../models/Madlib");
 const { libber } = require("../utils/utils");
 
-// get all madlibs
+// get a random madlib
 router.get("/", (req, res) => {
-  Madlib.find()
-    .sort({ createdAt: -1 })
-    .then(madlibs => res.json(madlibs))
-    .catch(err => res.status(404).json({ success: false }));
+  Madlib.count({}, (err, count) => {
+    if (err) {
+      console.log(err);
+    } else {
+      const randomNumber = Math.floor(Math.random() * count);
+
+      Madlib.findOne()
+        .skip(randomNumber)
+        .exec((err, madlib) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.json(madlib);
+          }
+        });
+    }
+  }).catch(err => res.status(404).json({ success: false }));
 });
 
 // convert to madlib form

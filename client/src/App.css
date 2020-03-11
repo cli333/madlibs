@@ -1,6 +1,11 @@
 body {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
