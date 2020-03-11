@@ -1,4 +1,4 @@
-# Madlib
+# Madlibs
 
 ![DEMO](/client/public/screenshot.jpg)
 
@@ -8,7 +8,7 @@ A madlib generator.
 
 <li>Check out submitted madlibs.</li>
 <li>Or submit a short paragraph to create your own madlib template.</li>
-<li>Fill in the blanks and see the hilarious results!.</li>
+<li>Fill in the blanks and see the hilarious results!</li>
 
 ## Summary
 
