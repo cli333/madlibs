@@ -1,6 +1,6 @@
 # Madlib
 
-![DEMO](/client/public/demo.gif)
+![DEMO](/client/public/screenshot.jpg)
 
 A madlib generator.
 
