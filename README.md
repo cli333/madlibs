@@ -4,7 +4,7 @@
 
 A madlib generator.
 
-<li>Check out some some submitted madlibs.</li>
+<li>Check out submitted madlibs.</li>
 <li>Or submit a short paragraph to create your own madlib template.</li>
 <li>Fill in the blanks and see the hilarious results!.</li>
 
